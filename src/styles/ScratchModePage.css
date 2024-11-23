@@ -1,0 +1,64 @@
+/* Scratch Mode Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2fd; /* Light Blue Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .page-container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+  }
+  
+  h1 {
+    color: #1565c0; /* Deep Blue */
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #0d47a1; /* Dark Blue */
+    font-size: 1.5rem;
+  }
+  
+  .language-list {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  button {
+    background: #1e88e5; /* Medium Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: #1565c0; /* Darker Blue */
+    transform: scale(1.05);
+  }
+  
+  .score-display {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #1e88e5;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #0d47a1;
+  }
+  

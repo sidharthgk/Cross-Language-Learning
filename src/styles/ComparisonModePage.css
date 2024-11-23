@@ -1,0 +1,74 @@
+/* Comparison Mode Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ede7f6; /* Light Purple Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .page-container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+  }
+  
+  h1 {
+    color: #512da8; /* Dark Purple */
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #311b92; /* Deep Purple */
+    font-size: 1.5rem;
+  }
+  
+  .language-select {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+  }
+  
+  .language-select div {
+    flex: 1;
+    text-align: center;
+  }
+  
+  button {
+    background: #673ab7; /* Purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: #512da8; /* Darker Purple */
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background: #d1c4e9; /* Light Purple for Disabled */
+    cursor: not-allowed;
+  }
+  
+  .score-display {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #673ab7;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #311b92;
+  }
+  
