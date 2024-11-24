@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LandingPage from "./pages/LandingPage";
 import ScratchModePage from "./pages/ScratchModePage";
 import ComparisonModePage from "./pages/ComparisonModePage";
 import './App.css';
-import './styles/global.css'; // Ensure global styles are included
+import './styles/global.css';
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -13,18 +13,19 @@ const App = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [isDarkMode]);
+
   return (
-    <div className={isDarkMode ? "dark-mode" : ""}>
+    <>
       <button 
         onClick={toggleDarkMode} 
-        style={{
-          position: "fixed",
-          top: "10px",
-          right: "10px",
-          zIndex: "1000",
-          padding: "10px 20px",
-          cursor: "pointer"
-        }}
+        className={isDarkMode ? "light-mode-button" : "dark-mode-button"}
       >
         {isDarkMode ? "Light Mode" : "Dark Mode"}
       </button>
@@ -35,7 +36,7 @@ const App = () => {
           <Route path="/comparison-mode" element={<ComparisonModePage />} />
         </Routes>
       </Router>
-    </div>
+    </>
   );
 };
 

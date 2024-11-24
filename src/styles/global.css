@@ -1,8 +1,4 @@
 /* global.css */
-.dark-mode {
-  background-color: #121212; /* Dark background */
-  color: #ffffff; /* Light text color */
-}
 body {
   background-color: #e6f7f8; /* Light teal background */
   margin: 0;
@@ -10,4 +6,51 @@ body {
   font-family: 'Arial', sans-serif;
   min-height: 100vh;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+.dark-mode {
+  background-color: #243447; /* Dark bluish-gray for entire background */
+  color: #ffffff; /* Light text color */
+}
+
+
+
+/* Dark Mode Button */
+.dark-mode-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #4c6ef5; /* Dark blue button for dark mode */
+  color: white; /* White text for contrast */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-button:hover {
+  background-color: #3b5bdb; /* Slightly darker blue on hover */
+}
+
+/* Update Light Mode Button */
+.light-mode-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0; /* Light gray for light mode */
+  color: #333; /* Dark text for contrast */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode-button:hover {
+  background-color: #d6d6d6; /* Slightly darker gray on hover */
 }
