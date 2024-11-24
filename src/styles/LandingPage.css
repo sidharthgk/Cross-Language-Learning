@@ -7,6 +7,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-sizing: border-box;
 }
 
 .dark-mode body {
@@ -21,7 +23,9 @@ body {
   gap: 50px; /* Increased gap for better spacing */
   padding: 40px;
   flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
-  width: 100%;
+  width: 100%; /* Ensure container spans full width */
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent any child overflow */
 }
 
 .dark-mode .landing-page {
@@ -33,7 +37,8 @@ body {
 
 /* Card design */
 .mode-card {
-  width: 350px;
+  width: 100%;
+  max-width: 350px; /* Limit card width */
   height: 450px;
   background: linear-gradient(135deg, #5ea3e9, #48c9b0); /* Gradient to match the teal theme */
   color: #ffffff; /* White text for contrast */
@@ -47,6 +52,7 @@ body {
   padding: 20px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 /* Dark Mode for Cards */
@@ -95,12 +101,15 @@ body {
   .landing-page {
     gap: 20px; /* Reduce gap for mobile */
     padding: 20px; /* Add padding for mobile */
+    width: 100%; /* Ensure it fits within the viewport */
+    overflow-x: hidden; /* Prevent scrolling on mobile */
   }
 
   .mode-card {
     width: 90%; /* Make cards take full width for smaller screens */
-    height: auto;
+    height: auto; /* Dynamically adjust height */
     padding: 20px; /* Maintain comfortable padding */
+    margin: 0 auto; /* Center cards */
   }
 
   .mode-card h2 {
