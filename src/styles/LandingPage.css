@@ -1,83 +1,108 @@
 /* General Website Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #befcff; /* Light teal background for the website */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
-  /* Container holding the cards */
-  .landing-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px; /* Increased gap for better spacing */
-    padding: 40px;
-  }
-  
-  /* Card design */
-  .mode-card {
-    width: 400px; /* Larger width */
-    height: 500px; /* Larger height */
-    background: linear-gradient(135deg, #5ea3e9, #48c9b0); /* New gradient to match the teal theme */
-    color: #ffffff; /* White text for contrast */
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
-    text-align: center;
-    padding: 30px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  /* Card Hover Effect */
-  .mode-card:hover {
-    transform: translateY(-15px); /* Lift on hover */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
-  }
-  
-  /* Card Title */
-  .mode-card h2 {
-    font-size: 28px; /* Larger title font */
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-transform: uppercase; /* Make titles stand out */
-    color: #fdfdfd; /* Softer white */
-  }
-  
-  /* Card Description */
-  .mode-card p {
-    font-size: 18px; /* Larger description font */
-    line-height: 1.8;
-    color: #f1f1f1; /* Softer white for description */
-  }
-  
-  /* Subtle background gradient animation */
-  body::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: radial-gradient(circle at top left, rgba(0, 176, 255, 0.1), transparent);
-    animation: backgroundPulse 5s infinite ease-in-out;
-  }
-  
-  @keyframes backgroundPulse {
-    0%, 100% {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #befcff; /* Light teal background for the website */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container holding the cards */
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* Increased gap for better spacing */
+  padding: 40px;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+/* Card design */
+.mode-card {
+  width: 350px; /* Adjusted width for smaller screens */
+  height: 450px; /* Adjusted height for smaller screens */
+  background: linear-gradient(135deg, #5ea3e9, #48c9b0); /* Gradient to match the teal theme */
+  color: #ffffff; /* White text for contrast */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
+  text-align: center;
+  padding: 20px; /* Reduced padding for mobile */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Card Hover Effect */
+.mode-card:hover {
+  transform: translateY(-15px); /* Lift on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Card Title */
+.mode-card h2 {
+  font-size: 24px; /* Slightly smaller title font */
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase; /* Make titles stand out */
+  color: #fdfdfd; /* Softer white */
+}
+
+/* Card Description */
+.mode-card p {
+  font-size: 16px; /* Smaller font for mobile */
+  line-height: 1.6;
+  color: #f1f1f1; /* Softer white for description */
+}
+
+/* Subtle background gradient animation */
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at top left, rgba(0, 176, 255, 0.1), transparent);
+  animation: backgroundPulse 5s infinite ease-in-out;
+}
+
+@keyframes backgroundPulse {
+  0%, 100% {
       opacity: 0.8;
-    }
-    50% {
-      opacity: 1;
-    }
   }
-  
+  50% {
+      opacity: 1;
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  body {
+      padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .landing-page {
+      gap: 20px; /* Reduce the gap between cards */
+  }
+
+  .mode-card {
+      width: 90%; /* Full width for smaller screens */
+      height: auto; /* Allow the height to adjust dynamically */
+      padding: 20px; /* Maintain comfortable padding */
+  }
+
+  .mode-card h2 {
+      font-size: 20px; /* Smaller title font for mobile */
+  }
+
+  .mode-card p {
+      font-size: 14px; /* Smaller font for descriptions on mobile */
+  }
+}
