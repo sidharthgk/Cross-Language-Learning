@@ -25,7 +25,7 @@ const App = () => {
     <>
       <button 
         onClick={toggleDarkMode} 
-        className={isDarkMode ? "light-mode-button" : "dark-mode-button"}
+        className={`mode-toggle-button ${isDarkMode ? "dark-active" : "light-active"}`}
       >
         {isDarkMode ? "Light Mode" : "Dark Mode"}
       </button>

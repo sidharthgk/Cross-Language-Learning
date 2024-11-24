@@ -1,23 +1,22 @@
 /* global.css */
 body {
-  background-color: #e6f7f8; /* Light teal background */
+  background-color: #e6f7f8; /* Light teal background for light mode */
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  min-height: 100vh;
+  height: 100vh; /* Fit exactly within the viewport height */
+  overflow: hidden; /* Remove both horizontal and vertical scrolling */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  box-sizing: border-box; /* Include padding and borders in element widths */
-  height: 100vh;
+  box-sizing: border-box;
 }
 
 .dark-mode {
-  background-color: #243447; /* Dark bluish-gray for entire background */
+  background-color: #1d4d60; /* Dark blue background for dark mode */
   color: #ffffff; /* Light text color */
 }
 
-/* Dark Mode Button */
-.dark-mode-button, .light-mode-button {
+/* Toggle Button Styles */
+.mode-toggle-button {
   position: fixed;
   top: 10px;
   right: 10px;
@@ -30,20 +29,22 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dark-mode-button {
-  background-color: #4c6ef5; /* Dark blue button for dark mode */
-  color: white; /* White text for contrast */
+/* Light Mode Button Active State */
+.mode-toggle-button.light-active {
+  background-color: #1d4d60; /* Dark blue for the light mode button */
+  color: #ffffff; /* White text for contrast */
 }
 
-.dark-mode-button:hover {
-  background-color: #3b5bdb; /* Slightly darker blue on hover */
+.mode-toggle-button.light-active:hover {
+  background-color: #163b4d; /* Slightly darker blue on hover */
 }
 
-.light-mode-button {
-  background-color: #e0e0e0; /* Light gray for light mode */
-  color: #333; /* Dark text for contrast */
+/* Dark Mode Button Active State */
+.mode-toggle-button.dark-active {
+  background-color: #e6f7f8; /* Light teal for the dark mode button */
+  color: #243447; /* Dark text to contrast with teal */
 }
 
-.light-mode-button:hover {
-  background-color: #d6d6d6; /* Slightly darker gray on hover */
+.mode-toggle-button.dark-active:hover {
+  background-color: #befcff; /* Slightly darker teal on hover */
 }
