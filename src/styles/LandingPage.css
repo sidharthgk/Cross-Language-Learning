@@ -96,6 +96,8 @@ body::after {
       width: 90%; /* Full width for smaller screens */
       height: auto; /* Allow the height to adjust dynamically */
       padding: 20px; /* Maintain comfortable padding */
+      background: var(--card-bg);
+      color: var(--card-text-color);
   }
 
   .mode-card h2 {
@@ -106,3 +108,4 @@ body::after {
       font-size: 14px; /* Smaller font for descriptions on mobile */
   }
 }
+
