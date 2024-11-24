@@ -16,41 +16,67 @@ body {
   background-color: #1d4d60; /* Match the dark background in global.css */
 }
 
+/* Title styles */
+.landing-page-title {
+  font-size: 3.125rem; /* Increased by 25% */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px; /* Increased by 25% */
+  color: #2c3e50; /* Dark blue for contrast */
+}
+
+.dark-mode .landing-page-title {
+  color: #ffffff; /* Light color for dark mode */
+}
+
+/* Adjust spacing for responsive design */
+@media (max-width: 768px) {
+  .landing-page-title {
+    font-size: 2.25rem; /* Increased by 25% */
+    margin-bottom: 25px; /* Increased by 25% */
+  }
+}
+
 /* Container holding the cards */
 .landing-page {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Default to column layout */
   align-items: center;
-  gap: 50px; /* Increased gap for better spacing */
-  padding: 40px;
-  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
-  width: 100%; /* Ensure container spans full width */
+  padding: 50px; /* Increased by 25% */
+  width: 100%;
   box-sizing: border-box;
-  overflow: hidden; /* Prevent any child overflow */
 }
 
-.dark-mode .landing-page {
+.landing-page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 62.5px; /* Increased by 25% */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  width: 100%;
+}
+
+.dark-mode .landing-page-content {
   background-color: #2a4a54; /* Subtle dark gray for container background */
-  border-radius: 15px;
-  padding: 50px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  border-radius: 18.75px; /* Increased by 25% */
+  padding: 62.5px; /* Increased by 25% */
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
 /* Card design */
 .mode-card {
-  width: 100%;
-  max-width: 350px; /* Limit card width */
-  height: 450px;
+  width: 375px; /* Increased by 25% */
+  height: 562.5px; /* Increased by 25% */
   background: linear-gradient(135deg, #5ea3e9, #48c9b0); /* Gradient to match the teal theme */
   color: #ffffff; /* White text for contrast */
-  border-radius: 15px;
+  border-radius: 18.75px; /* Increased by 25% */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
   text-align: center;
-  padding: 20px;
+  padding: 25px; /* Increased by 25% */
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   box-sizing: border-box;
@@ -60,25 +86,25 @@ body {
 .dark-mode .mode-card {
   background: linear-gradient(135deg, #364c54, #285661); /* Dark teal gradient */
   color: #e0e0e0;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 31.25px rgba(0, 0, 0, 0.6); /* Increased by 25% */
 }
 
 /* Card Hover Effect */
 .mode-card:hover {
-  transform: translateY(-10px); /* Reduced lift on hover for smaller screens */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  transform: translateY(-12.5px); /* Increased by 25% */
+  box-shadow: 0 15px 37.5px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
 .dark-mode .mode-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5); /* Softer shadow */
+  transform: translateY(-10px);
+  box-shadow: 0 15px 43.75px rgba(0, 0, 0, 0.5); /* Softer shadow */
 }
 
 /* Card Title */
 .mode-card h2 {
-  font-size: 1.5rem; /* Adjusted font size for better scaling */
+  font-size: 1.875rem; /* Increased by 25% */
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12.5px; /* Increased by 25% */
   color: #fdfdfd;
 }
 
@@ -88,8 +114,8 @@ body {
 
 /* Card Description */
 .mode-card p {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.25rem; /* Increased by 25% */
+  line-height: 1.875; /* Increased by 25% */
   color: #f1f1f1;
 }
 
@@ -99,30 +125,27 @@ body {
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
-  .landing-page {
-    gap: 20px; /* Reduce gap for mobile */
-    padding: 20px; /* Add padding for mobile */
-    width: 100%; /* Ensure it fits within the viewport */
-    overflow-x: hidden; /* Prevent scrolling on mobile */
+  .landing-page-content {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    gap: 25px; /* Increased by 25% */
   }
 
   .mode-card {
-    width: 90%; /* Make cards take full width for smaller screens */
+    width: 112.5%; /* Increased by 25% */
     height: auto; /* Dynamically adjust height */
-    padding: 20px; /* Maintain comfortable padding */
-    margin: 0 auto; /* Center cards */
+    padding: 25px; /* Increased by 25% */
   }
 
   .mode-card h2 {
-    font-size: 1.25rem; /* Adjust font size for smaller screens */
+    font-size: 1.5625rem; /* Increased by 25% */
   }
 
   .mode-card p {
-    font-size: 14px;
+    font-size: 17.5px; /* Increased by 25% */
   }
 
   button {
-    padding: 8px 15px; /* Adjust button padding for smaller screens */
-    font-size: 14px; /* Smaller font size for buttons */
+    padding: 10px 18.75px; /* Increased by 25% */
+    font-size: 17.5px; /* Increased by 25% */
   }
 }
