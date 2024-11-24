@@ -3,7 +3,6 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #befcff; /* Light teal background for the website */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,13 +21,13 @@ body {
   gap: 50px; /* Increased gap for better spacing */
   padding: 40px;
   flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  width: 100%;
 }
 
-/* Dark Mode for Landing Page Container */
 .dark-mode .landing-page {
   background-color: #2a4a54; /* Subtle dark gray for container background */
-  border-radius: 15px; /* Rounded container for better aesthetics */
-  padding: 50px; /* Add padding for more spacing in dark mode */
+  border-radius: 15px;
+  padding: 50px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
@@ -53,98 +52,67 @@ body {
 /* Dark Mode for Cards */
 .dark-mode .mode-card {
   background: linear-gradient(135deg, #364c54, #285661); /* Dark teal gradient */
-  color: #e0e0e0; /* Light gray text for contrast */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Enhanced shadow for depth */
+  color: #e0e0e0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
 /* Card Hover Effect */
 .mode-card:hover {
-  transform: translateY(-15px); /* Lift on hover */
+  transform: translateY(-10px); /* Reduced lift on hover for smaller screens */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
-/* Dark Mode Card Hover Effect */
 .dark-mode .mode-card:hover {
-  transform: translateY(-10px); /* Subtle lift on hover */
+  transform: translateY(-8px);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5); /* Softer shadow */
 }
 
 /* Card Title */
 .mode-card h2 {
-  font-size: 24px;
+  font-size: 1.5rem; /* Adjusted font size for better scaling */
   font-weight: 700;
-  margin-bottom: 15px;
-  text-transform: uppercase; /* Make titles stand out */
-  color: #fdfdfd; /* Softer white */
+  margin-bottom: 10px;
+  color: #fdfdfd;
 }
 
 .dark-mode .mode-card h2 {
-  color: #ffffff; /* Bright white title in dark mode */
+  color: #ffffff;
 }
 
 /* Card Description */
 .mode-card p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #f1f1f1; /* Softer white for description */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f1f1f1;
 }
 
 .dark-mode .mode-card p {
-  color: #d0d0d0; /* Slightly dimmer text for dark mode */
-}
-
-/* Subtle background gradient animation */
-body::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: radial-gradient(circle at top left, rgba(0, 176, 255, 0.1), transparent);
-  animation: backgroundPulse 5s infinite ease-in-out;
-}
-
-.dark-mode body::after {
-  background: radial-gradient(circle at top left, rgba(30, 70, 80, 0.3), transparent);
-}
-
-@keyframes backgroundPulse {
-  0%, 100% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
-  }
+  color: #d0d0d0;
 }
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
-  body {
-      padding: 10px; /* Reduce padding for smaller screens */
+  .landing-page {
+    gap: 20px; /* Reduce gap for mobile */
+    padding: 20px; /* Add padding for mobile */
   }
 
-  .landing-page {
-    width: 100%;
-    height: 100vh; /* Ensure it fills the screen */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
   .mode-card {
-      width: 90%; /* Full width for smaller screens */
-      height: auto; /* Allow the height to adjust dynamically */
-      padding: 20px; /* Maintain comfortable padding */
+    width: 90%; /* Make cards take full width for smaller screens */
+    height: auto;
+    padding: 20px; /* Maintain comfortable padding */
   }
 
   .mode-card h2 {
-      font-size: 20px; /* Smaller title font for mobile */
+    font-size: 1.25rem; /* Adjust font size for smaller screens */
   }
 
   .mode-card p {
-      font-size: 14px; /* Smaller font for descriptions on mobile */
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 15px; /* Adjust button padding for smaller screens */
+    font-size: 14px; /* Smaller font size for buttons */
   }
 }
