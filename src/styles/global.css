@@ -1,4 +1,8 @@
 /* global.css */
+.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text color */
+}
 body {
   background-color: #e6f7f8; /* Light teal background */
   margin: 0;
@@ -6,9 +10,4 @@ body {
   font-family: 'Arial', sans-serif;
   min-height: 100vh;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
-}
-
-.dark-mode {
-  background-color: #121212; /* Dark background */
-  color: #ffffff; /* Light text color */
 }
